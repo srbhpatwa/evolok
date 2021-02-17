@@ -18,6 +18,10 @@ a {
 	text-decoration: none;
 }
 
+ul, ol{
+	list-style: none;
+}
+
 h1,
 h2,
 h3,
@@ -277,4 +281,253 @@ button {
 	max-width: 60px;
     margin: -30px auto 5px;
     display: block;
+}
+
+
+/* plan page */
+
+.ie-logo{width: 50px; height: 50px; margin: 0 auto 20px;}
+.top-heading {
+    text-align: center;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000;
+    font-weight: 700;
+}
+
+.top-heading span{
+	font-size: 16px;
+    color: #6c798f;
+    display: block;
+    font-weight: 400;
+	line-height: 22px;
+	padding: 10px 0;
+}
+.divice-img {
+	text-align: center;	
+    padding-bottom: 10px;
+}
+.plan-heading {
+	text-align: center;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 700;
+}
+.plan-items-wrapper{
+	text-align:  center;
+	padding-top: 30px;
+	max-width: 826px;
+	margin: 0 auto;
+}
+.plan-column{
+	display: inline-block;
+	width: 31.5%;
+	vertical-align: top;
+	text-align: left;
+	border-radius: 10px;
+	border: solid 1px #dfe1e6;
+	padding: 26px 17px 15px 20px;
+	margin: 0 15px 20px 0;
+	position: relative;
+}
+
+.plan-column:nth-child(3n) {
+    margin: 0 0 20px 0;
+}
+.plan-column .recommended{
+	border-radius: 6px;
+    background-color: #fe1313;
+    color: #fff;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 700;
+    width: 110px;
+    position: absolute;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3px 0 2px;
+    left: 0;
+    right: 0;
+    top: -9px;
+    bottom: 0;
+    height: 15px;
+}
+.plan-name {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+	color: #000;	
+    text-align: center;
+}
+.plan-name span{
+	display: block;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #6c798f;
+    padding: 5px 0;
+}
+
+.plan-cost{
+	display: block;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+	color: #000;
+	text-align: center;
+	padding: 15px 0 0;
+}
+.plan-cost b {
+    display: inline-block;
+    font-size: 18px;
+    padding: 0 3px 0 0;
+}
+.plan-cost span{
+	display: block;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #6c798f;
+    padding: 5px 0;
+}
+
+.plan-column button, .plan-column button:focus{
+	color: #6c7990;
+	font-size: 12px;
+	padding: 8px 0;
+	border: solid 1px #979797;
+	margin: 15px 0;
+	outline: 0;
+}
+.plan-featurelist li{
+	font-size: 13px;
+	line-height: 18px;
+	position: relative;
+	padding: 0px 0 4px 28px;
+}
+.plan-featurelist li:after {
+	content: "";
+    display: block;
+    border-width: 0 3px 3px 0;
+    height: 12px;
+    width: 6px;
+    border-color: #61c312;
+    border-style: solid;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 10px;
+    top: -1px;
+}
+.duration-wrapper{
+	max-width: 496px;
+	margin: 0 auto;
+}
+.duration-heading{
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 700;
+	color: #000;;
+	text-align: center;
+	padding: 0 0 25px 0;
+}
+
+/* custom checkbox */
+.checkbox_box{
+	display: block;
+	position: relative;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 22px;
+	padding: 0 0 0 25px;
+	font-weight: 700;
+	color: #000;
+}
+.checkbox_box input{
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+.checkmark {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	height: 17px;
+	width: 17px;
+	border: 1px solid #6c798f;
+	background-color: #ffffff;
+	border-radius: 50%;
+}
+.checkbox_box:hover input ~ .checkmark {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.checkbox_box input:checked ~ .checkmark {
+	background-color: #ffffff;
+}
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.checkbox_box input:checked ~ .checkmark:after {
+	display: block;
+}
+.checkbox_box .checkmark:after {
+	top: 3px;
+    left: 3px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #3967d6;
+}
+.checkbox_box_wrapper {
+    float: left;
+}
+/* end */
+
+.select-item {
+	border-top: solid 1px #dfe1e6;
+	padding: 17px 0;
+	overflow: hidden;
+}
+
+.discount-red{
+	color: #fe1313;
+	display: block;
+}
+.cost-time {
+	float: right;
+	font-size: 18px;
+	color: #000000;
+	font-weight: 700;
+}
+
+.disabled-price {
+    color: #6c798f;
+	text-decoration: line-through;
+	position: relative;
+	font-weight: 400;
+	display: inline-block;
+	padding: 0 5px 0 0;
+}
+
+.cost-time .rupee-icon::before{
+	font-size: 16px;
+	content: "₹";
+}
+.time-duration{
+	display: block;
+	text-align: right;
+	font-size: 12px;
+	line-height: 18px;
+	color: #6c798f;
+	font-weight: 400;
+}
+.auto-renewtxt{
+	display: block;
+	clear: both;
+	font-style: italic;
+	font-size: 13px;
+	line-height: 20px;
+	padding: 8px 0 0 0;
 }
