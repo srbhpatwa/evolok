@@ -431,6 +431,23 @@ button {
 	text-align: center;
 	padding: 0 0 25px 0;
 }
+.duration-item-wrapper{
+	border-top: solid 1px #dfe1e6;
+}
+
+.best-value{
+	width: 86px;
+	height: 14px;
+	margin: -8px 0 2px 20px;
+	padding: 2px 0 0 12px;
+	border-radius: 6px;
+	font-size: 10px;
+	line-height: 12px;
+	font-weight: 700;
+	font-style: italic;
+	color: #ffffff;
+	background-color: #fe1313;
+}
 
 /* custom checkbox */
 .checkbox_box{
@@ -486,7 +503,7 @@ button {
 /* end */
 
 .select-item {
-	border-top: solid 1px #dfe1e6;
+	border-bottom: solid 1px #dfe1e6;
 	padding: 17px 0;
 	overflow: hidden;
 }
