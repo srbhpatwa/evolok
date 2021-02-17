@@ -119,14 +119,14 @@ input[type="tel"]:focus {
 	color: #7a869a;
 }
 
-input.valid {
-	box-shadow: 0 2px 4px 0 #1bc23d;
-	border-color: #1bc23d;
+input.error {
+	box-shadow: 0 2px 4px -3px #ff1313;
+	border-color: #ff1313;
 }
 
-input.error {
-	box-shadow: 0 2px 4px 0 #ff1313;
-	border-color: #ff1313;
+input.valid {
+	box-shadow: 0 2px 4px -3px #1bc23d;
+	border-color: #1bc23d;
 }
 
 input[name="uname"],
@@ -150,6 +150,12 @@ input[name="psw"] {
 
 input[name="otp"] {
 	background: url(../images/otp.svg) left center /24px 22px no-repeat;
+}
+
+.errormsg {
+	font-size: 12px;
+	line-height: normal;
+	color: #ff1212;
 }
 
 /* Button Styling */
