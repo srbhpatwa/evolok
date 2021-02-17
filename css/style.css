@@ -1,5 +1,187 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing:border-box;	
 }
 
+body {
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1.47;
+	color: #6c798f;
+}
+
+a {
+	font-weight: bold;
+	color: #3967d6;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	line-height: 1.25;
+	color: #000;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 22px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 10px
+}
+
+.row {
+	width: 100%
+}
+
+.row:before,
+.row:after {
+	display: block;
+	content: "";
+	clear: both
+}
+
+.clearfix {
+	display: block
+}
+
+.clearfix:before,
+.clearfix:after {
+	clear: both;
+	display: block;
+	content: ""
+}
+
+/* Form */
+label {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: normal;
+	color: #7a869a;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+	width: 100%;
+	display: block;
+	border: 0;
+	border-bottom: solid 1px #e1e2e7;
+	padding: 15px;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: normal;
+	color: #7a869a;;
+	transition: all .3s ease;
+	outline: 0;
+	margin: 0 0 15px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+	border-color: #3967d6;
+	outline: 0;
+}
+
+::-webkit-input-placeholder {
+	color: #7a869a;
+}
+
+:-ms-input-placeholder { 
+	color: #7a869a;
+}
+
+::placeholder {
+	color: #7a869a;
+}
+
+input.valid {
+	box-shadow: 0 2px 4px 0 #1bc23d;
+	border-color: #1bc23d;
+}
+
+input.error {
+	box-shadow: 0 2px 4px 0 #ff1313;
+	border-color: #ff1313;
+}
+
+/* Button Styling */
+.btn,
+button {
+	padding: 16px 15px 15px;
+	border-radius: 10px;
+	border: solid 1px #3967d6;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: normal;
+	text-align: center;
+	color: #3967d6;
+	display: inline-block;
+	background: transparent;
+	width: 100%;
+}
+
+.btn.filled,
+.btn:hover {
+	color: #fff;
+	background-color: #3967d6;
+}
+
+.btn.filled:hover {
+	color: #345cbb;
+}
+
+/* Page */
+.app-container {
+    padding: 44px 17px 30px;
+}
+
+.app-container .container {
+	padding: 0;
+}
+
+.app-content {
+    padding: 0px 20px 12px;
+    border-radius: 20px;
+    border: solid 3px #dfe1e6;
+}
+
+.app-title {
+    text-align: center;
+	margin: 0 0 30px;
+}
+
+.app-title h1 {
+    margin: 0 0 5px;
+    line-height: normal;
+}
+
+.app-title img {
+	max-width: 60px;
+    margin: -30px auto 5px;
+    display: block;
+}
