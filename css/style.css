@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing:border-box;	
+	box-sizing: border-box;
 }
 
 body {
@@ -74,16 +74,22 @@ h4 {
 }
 
 /* Form */
+.form-field {
+	position: relative;
+}
+
 label {
 	font-size: 12px;
 	font-weight: normal;
 	line-height: normal;
 	color: #7a869a;
 }
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="number"] {
 	width: 100%;
 	display: block;
 	border: 0;
@@ -93,7 +99,8 @@ input[type="tel"] {
 	font-size: 14px;
 	font-weight: normal;
 	line-height: normal;
-	color: #7a869a;;
+	color: #7a869a;
+	;
 	transition: all .3s ease;
 	outline: 0;
 	margin: 0 0 15px;
@@ -102,7 +109,8 @@ input[type="tel"] {
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
-input[type="tel"]:focus {
+input[type="tel"]:focus,
+input[type="number"]:focus {
 	border-color: #3967d6;
 	outline: 0;
 }
@@ -111,7 +119,7 @@ input[type="tel"]:focus {
 	color: #7a869a;
 }
 
-:-ms-input-placeholder { 
+:-ms-input-placeholder {
 	color: #7a869a;
 }
 
@@ -149,13 +157,26 @@ input[name="psw"] {
 }
 
 input[name="otp"] {
-	background: url(../images/otp.svg) left center /24px 22px no-repeat;
+	background: url(../images/OTP.svg) left center /24px 22px no-repeat;
 }
 
 .errormsg {
 	font-size: 12px;
 	line-height: normal;
 	color: #ff1212;
+}
+
+.errormsg a {
+	font-weight: 700;
+}
+
+span.resend-otp {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 /* Button Styling */
@@ -174,6 +195,7 @@ button {
 	width: 100%;
 	cursor: pointer;
 	margin-top: 30px;
+	outline: 0;
 }
 
 .btn.filled,
@@ -253,28 +275,28 @@ button {
 }
 
 .app-container {
-    padding: 44px 17px 30px;
+	padding: 44px 17px 30px;
 }
 
 .app-content {
 	min-height: calc(100vh - 74px);
-    padding: 0px 20px 12px;
-    border-radius: 20px;
-    border: solid 3px #dfe1e6;
+	padding: 0px 20px 12px;
+	border-radius: 20px;
+	border: solid 3px #dfe1e6;
 }
 
 .app-title {
-    text-align: center;
+	text-align: center;
 	margin: 0 0 30px;
 }
 
 .app-title h1 {
-    margin: 0 0 5px;
-    line-height: normal;
+	margin: 0 0 5px;
+	line-height: normal;
 }
 
 .app-title img {
 	max-width: 60px;
-    margin: -30px auto 5px;
-    display: block;
+	margin: -30px auto 5px;
+	display: block;
 }
