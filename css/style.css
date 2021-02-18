@@ -612,7 +612,13 @@ button {
 
 i.payment-card-icon,
 i.payment-instant-icon {
-    float: right;
+	float: right;
+	width: 28px;
+}
+
+i.payment-card-icon img, i.payment-instant-icon img {
+	max-width: 100%;
+	opacity: 0.35;
 }
 
 .payment-method-type p{
@@ -643,6 +649,20 @@ span.select-check {
 .payment-method-type.active-payment-mode span.select-check {
     background: #3967d6;
     box-shadow: 0 0 0 1px #3967d6, 0 0 0 2px #fff inset;
+}
+.payment-method-type .info-icon {
+    display: inline-block;
+    background: rgba(0,0,0,0.1);
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+    font-style: italic;
+    font-weight: 700;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
 }
 #profile-container{
 	display: none;
@@ -765,6 +785,9 @@ span.select-check {
 	}
 	.btn-box button{
 		margin-top: 0;
+	}
+	i.payment-card-icon, i.payment-instant-icon {
+		width: 20px;
 	}
 	.payment-method-type p{
 		font-size: 11px;
