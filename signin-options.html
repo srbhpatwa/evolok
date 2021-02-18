@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Evolok Reset Password</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="app-container">
+		<div class="container">
+
+			<div class="row">
+				<div class="app-content">
+					<div class="app-title">
+						<img src="images/ie-icon.svg" alt="indian express">
+						<h1>Reset Password</h1>
+						<p>We have sent an OTP on your email from noreply@indianexpressdigital.in.
+							Please enter it here to reset your password.
+						</p>
+					</div>
+					<div class="signin-method-options">
+						<ul id="tabs">
+
+							<li><a id="tab1">Use Password</a></li>
+							<li><a id="tab2">Use OTP</a></li>
+
+						</ul>
+					</div>
+					<div class="tab-content" id="tab1C">
+						<form class="ie-form" action="#" method="post">
+							<div class="row">
+								<div class="form-field ie-sm-12">
+									<input type="text" placeholder="Email / Mobile" name="uname" required>
+									<span class="edit-email"><img src="images/edit.svg"></span>
+								</div>
+								<div class="form-field ie-sm-12">
+									<input type="password" placeholder="Password" name="psw" required>
+									<span class="resend-otp">Forgot?</span>
+								</div>
+								<div class="form-field ie-sm-12">
+									<label><input type="checkbox" id="remember" name="remember" value="remember"> Keep
+										me logged in</label>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="container">
+									<button type="submit" class="btn filled">SignIn</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="tab-content" id="tab2C">
+						<form class="ie-form" action="#" method="post">
+							<div class="row">
+								<div class="form-field ie-sm-12">
+									<input type="text" placeholder="Email / Mobile" name="uname" required>
+									<span class="edit-email"><img src="images/edit.svg"></span>
+								</div>
+								<div class="form-field ie-sm-12">
+									<input type="number" placeholder="OTP" name="otp" required>
+									<span class="resend-otp">Resend?</span>
+								</div>
+								<div class="form-field ie-sm-12">
+									<label><input type="checkbox" id="remember" name="remember" value="remember"> Keep
+										me logged in</label>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="container">
+									<button type="submit" class="btn filled">SignIn</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="app-content-bottom">
+						<p>Don’t have an account?
+							<a href="#">Create One Now</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	(function () {
+		$(document).ready(function () {
+			$('#tabs li a:not(:first)').addClass('inactive');
+			$('.tab-content').hide();
+			$('.tab-content:first').show();
+			$('#tabs li a').click(function () {
+				var t = $(this).attr('id');
+
+				if ($(this).hasClass('inactive')) { //this is the start of our condition 
+					$('#tabs li a').addClass('inactive');
+					$(this).removeClass('inactive');
+
+					$('.tab-content').hide();
+					$('#' + t + 'C').fadeIn('slow');
+				}
+				e.preventDefault();
+			});
+
+			$('.ie-form button').click(function (e) {
+				e.preventDefault();
+				var email = $('input[name="uname"]').val();
+				var password = $('input[name="psw"]').val();
+				var otp = $('input[name="otp"]').val();
+
+				$(".errormsg").remove();
+
+				if (email.length < 1) {
+					$('input[name="uname"]').addClass('error').removeClass('valid');
+					$('input[name="uname"]').after('<span class="errormsg">This field is required</span>');
+				} else {
+					var regEx = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+					var validEmail = regEx.test(email);
+					if (!validEmail) {
+						$('input[name="uname"]').addClass('error').removeClass('valid');
+						$('input[name="uname"]').after('<span class="errormsg">Enter a valid email</span>');
+					} else {
+						$('input[name="uname"]').addClass('valid').removeClass('error');
+					}
+				}
+
+				if (password.length < 8) {
+					$('input[name="psw"]').addClass('error').removeClass('valid');
+					$('input[name="psw"]').after('<span class="errormsg">Password must be at least 8 characters long</span>');
+				} else {
+					$('input[name="psw"]').addClass('valid').removeClass('error');
+				}
+
+				if (otp.length < 4) {
+					$('input[name="otp"]').addClass('error').removeClass('valid');
+					$('input[name="otp"]').after('<span class="errormsg">OTP is not matching. <a class="resend-otp" href="#">Resend?</a></span>');
+				} else {
+					$('input[name="otp"]').addClass('valid').removeClass('error');
+				}
+			});
+		});
+	})();
+</script>
+
+</html>

@@ -160,6 +160,11 @@ input[name="otp"] {
 	background: url(../images/OTP.svg) left center /24px 22px no-repeat;
 }
 
+input[type=checkbox] {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
 .errormsg {
 	font-size: 12px;
 	line-height: normal;
@@ -280,9 +285,10 @@ button {
 
 .app-content {
 	min-height: calc(100vh - 74px);
-	padding: 0px 20px 12px;
+	padding: 0px 20px 72px;
 	border-radius: 20px;
 	border: solid 3px #dfe1e6;
+	position: relative;
 }
 
 .app-title {
@@ -299,4 +305,69 @@ button {
 	max-width: 60px;
 	margin: -30px auto 5px;
 	display: block;
+}
+
+span.edit-email {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+span.edit-email img {
+    width: 20px;
+}
+
+.signin-method-options {
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+ul#tabs {
+    margin: 0;
+    list-style: none;
+    padding: 3px;
+    border-radius: 10px;
+    border: solid 1px #dfe1e6;
+    display: inline-block;
+}
+
+ul#tabs li {
+    display: inline-block;
+}
+
+ul#tabs li a {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: normal;
+    text-align: center;
+    color: #fff;
+    padding: 11px 18px 9px;
+    display: inline-block;
+    border-radius: 8px;
+    background-color: #3967d6;
+}
+
+ul#tabs li a.inactive {
+    color: #6c798f;
+    background: transparent;
+}
+
+.app-content-bottom {
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    right: 0;
+    left: 0;
+}
+
+.app-content-bottom p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.app-content-bottom p a {
+    display: block;
 }
