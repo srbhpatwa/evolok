@@ -7,11 +7,12 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.js"
 		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 	<link href="css/style.css" rel="stylesheet">
+	<script src="js/script.js"></script>
 </head>
 
 <body>
 	<div class="app-container">
-		<div class="container">
+		<div class="container" id="top-sec-container">
 			<div class="row">
 				<div class="ie-logo">
 					<img src="images/ie-icon.svg" alt="" />
@@ -29,74 +30,72 @@
 					<div class="plan-items-wrapper">
 						<div class="plan-column">
 							<span class="recommended">RECOMMENDED</span>
-							<div class="plan-name">
-								Combo Plan <span>Digital + ePaper</span>
+							<div class="plan-row">
+								<div class="plan-name">
+									Combo Plan <span>Digital + ePaper</span>
+								</div>
+								<div class="plan-cost">
+									<b>₹</b>149 <span>per month</span>
+								</div>
 							</div>
-							<div class="plan-cost">
-								<b>₹</b>149 <span>per month</span>
+							<div class="plan-row">
+								<div class="feature-toggle">What’s included <i></i></div><button>Select</button>
+								<ul class="plan-featurelist">
+									<li class="text-disabled">Access to <strong>daily ePaper</strong></li>
+									<li class="text-disabled">Access to e-paper archives</li>
+									<li>Ad-lite experience on Apps</li>
+									<li>Unlimited Access to Premium Content</li>
+								</ul>
 							</div>
-							<button>Select</button>
-							<ul class="plan-featurelist">
-								<li>Access to <strong>daily ePaper</strong></li>
-								<li>Access to e-paper archives</li>
-								<li>Ad-lite experience on Apps</li>
-								<li>Unlimited Access to Premium Content</li>
-							</ul>
 						</div>
 						<div class="plan-column">
-							<div class="plan-name">
-								Combo Plan <span>Digital + ePaper</span>
+							<div class="plan-row">
+								<div class="plan-name">
+									Combo Plan <span>Digital + ePaper</span>
+								</div>
+								<div class="plan-cost">
+									<b>₹</b>149 <span>per month</span>
+								</div>
 							</div>
-							<div class="plan-cost">
-								<b>₹</b>149 <span>per month</span>
+							<div class="plan-row">
+								<div class="feature-toggle">What’s included <i></i></div><button>Select</button>
+								<ul class="plan-featurelist">
+									<li>Access to <strong>daily ePaper</strong></li>
+									<li>Access to e-paper archives</li>
+									<li>Ad-lite experience on Apps</li>
+									<li>Unlimited Access to Premium Content</li>
+								</ul>
 							</div>
-							<button>Select</button>
-							<ul class="plan-featurelist">
-								<li>Access to <strong>daily ePaper</strong></li>
-								<li>Access to e-paper archives</li>
-								<li>Ad-lite experience on Apps</li>
-								<li>Unlimited Access to Premium Content</li>
-							</ul>
 						</div>
 						<div class="plan-column">
-							<div class="plan-name">
-								Combo Plan <span>Digital + ePaper</span>
+							<div class="plan-row">
+								<div class="plan-name">
+									Combo Plan <span>Digital + ePaper</span>
+								</div>
+								<div class="plan-cost">
+									<b>₹</b>149 <span>per month</span>
+								</div>
 							</div>
-							<div class="plan-cost">
-								<b>₹</b>149 <span>per month</span>
+							<div class="plan-row">
+								<div class="feature-toggle">What’s included <i></i></div><button>Select</button>
+								<ul class="plan-featurelist">
+									<li>Access to <strong>daily ePaper</strong></li>
+									<li>Access to e-paper archives</li>
+									<li>Ad-lite experience on Apps</li>
+									<li>Unlimited Access to Premium Content</li>
+								</ul>
 							</div>
-							<button>Select</button>
-							<ul class="plan-featurelist">
-								<li>Access to <strong>daily ePaper</strong></li>
-								<li>Access to e-paper archives</li>
-								<li>Ad-lite experience on Apps</li>
-								<li>Unlimited Access to Premium Content</li>
-							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container" id="duration-container">
 			<div class="row">
 				<div class="duration-wrapper">
-					<h3 class="duration-heading">Select your preffered duration</h3>
+					<h3 class="common-h3heading duration-heading">Select your preffered duration</h3>
 					<div class="duration-item-wrapper">
 						<div class="best-value">BEST VALUE</div>
-						<div class="select-item">
-							<div class="checkbox_box_wrapper">
-								<label class="checkbox_box">Yearly <span class="discount-red">50% Discount</span>
-									<input type="radio" name="radio" checked="true">
-									<span class="checkmark"></span>
-								</label>
-							</div>
-							<div class="cost-time">
-								<span class="disabled-price rupee-icon">2,999</span>
-								<span class="rupee-icon">2,199</span>
-								<span class="time-duration">for 1 year</span>
-							</div>
-							<div class="auto-renewtxt">After one year, renews automatically at one year for R2,199.</div>
-						</div>
 						<div class="select-item">
 							<div class="checkbox_box_wrapper">
 								<label class="checkbox_box">Yearly <span class="discount-red">50% Discount</span>
@@ -109,10 +108,25 @@
 								<span class="rupee-icon">2,199</span>
 								<span class="time-duration">for 1 year</span>
 							</div>
+							<div class="auto-renewtxt">After one year, renews automatically at one year for R2,199.
+							</div>
 						</div>
 						<div class="select-item">
 							<div class="checkbox_box_wrapper">
-								<label class="checkbox_box">Yearly <span class="discount-red">50% Discount</span>
+								<label class="checkbox_box">Quarterly <span class="discount-red">20% Discount</span>
+									<input type="radio" name="radio">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="cost-time">
+								<span class="disabled-price rupee-icon">2,999</span>
+								<span class="rupee-icon">2,199</span>
+								<span class="time-duration">for 1 year</span>
+							</div>
+						</div>
+						<div class="select-item">
+							<div class="checkbox_box_wrapper">
+								<label class="checkbox_box">Monthly <span class="discount-red">50% Discount</span>
 									<input type="radio" name="radio">
 									<span class="checkmark"></span>
 								</label>
@@ -124,6 +138,71 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="container">
+			<div class="row">
+				<div class="payment-wrapper">
+					<h3 class="payment-heading">Select preffered mode of payment </h3>
+					<div class="payment-method">
+						<div class="payment-method-type">
+							<span class="select-check"></span>
+							<div class="payment-typetext">Pay Using <br>Card*</div>
+							<i class="payment-card-icon">icon</i>
+							<p>(Master and Visa Credit Cards issued by all banks and Debit Cards issued by Kotak, ICICI,
+								Canara and Citibank only)</p>
+						</div>
+						<div class="payment-method-type">
+							<span class="select-check"></span>
+							<div class="payment-typetext">Instant <br>Payments*</div>
+							<i class="payment-instant-icon">icon</i>
+							<p>(All Debits and Credit Cards including UPI / Wallets / NetBanking)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<div class="container" id="profile-container">
+			<div class="row">
+				<div class="payment-wrapper">
+					<h3 class="common-h3heading payment-heading">Select preffered mode of payment </h3>
+					<div class="payment-method">
+						<div class="payment-method-type">
+							<span class="select-check"></span>
+							<div class="payment-typetext">Pay Using <br>Card*</div>
+							<i class="payment-card-icon">icon</i>
+							<p>(Master and Visa Credit Cards issued by all banks and Debit Cards issued by Kotak, ICICI,
+								Canara and Citibank only)</p>
+						</div>
+						<div class="payment-method-type">
+							<span class="select-check"></span>
+							<div class="payment-typetext">Instant <br>Payments*</div>
+							<i class="payment-instant-icon">icon</i>
+							<p>(All Debits and Credit Cards including UPI / Wallets / NetBanking)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="profile-wrapper">
+					<h3 class="common-h3heading profile-heading">Create your profile</h3>
+					<form class="profile-form">
+						<div class="form-row">
+							<input type="text" placeholder="First Name" />
+							<input type="text" placeholder="Last Name" />
+						</div>
+						<div class="form-row contact-details">
+							<input type="Email" placeholder="Email" class="edit-icon" />
+							<input type="tel" placeholder="Mobile" class="edit-icon" />
+						</div>
+						<div class="btn-box">
+							<button>Pay ₹ 2,999</button>
+							<div class="terms-text">
+								<a href="#">Need Help?</a>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

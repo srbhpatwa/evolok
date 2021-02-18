@@ -331,9 +331,6 @@ button {
 	position: relative;
 }
 
-.plan-column:nth-child(3n) {
-    margin: 0 0 20px 0;
-}
 .plan-column .recommended{
 	border-radius: 6px;
     background-color: #fe1313;
@@ -353,6 +350,11 @@ button {
     bottom: 0;
     height: 15px;
 }
+
+.plan-row{
+	overflow: hidden;
+}
+
 .plan-name {
     font-size: 22px;
     line-height: 22px;
@@ -419,11 +421,12 @@ button {
     left: 10px;
     top: -1px;
 }
-.duration-wrapper{
-	max-width: 496px;
-	margin: 0 auto;
+
+.plan-featurelist li.text-disabled{
+	text-decoration: line-through;
 }
-.duration-heading{
+
+.common-h3heading{
 	font-size: 14px;
 	line-height: 18px;
 	font-weight: 700;
@@ -431,6 +434,17 @@ button {
 	text-align: center;
 	padding: 0 0 25px 0;
 }
+
+#duration-container{
+	display: none;
+}
+
+.duration-wrapper{
+	max-width: 495px;
+	margin: 0 auto;
+	padding: 0 0 25px;
+}
+
 .duration-item-wrapper{
 	border-top: solid 1px #dfe1e6;
 }
@@ -447,6 +461,24 @@ button {
 	font-style: italic;
 	color: #ffffff;
 	background-color: #fe1313;
+}
+
+.feature-toggle{
+	font-size: 12px;
+	color: #000000;
+	font-weight: 700;
+	line-height: 18px;
+	display: none;
+}
+
+.plan-column.active-plancard{
+	border-color: #3967d6
+}
+
+.plan-column.active-plancard button{
+	background-color: #3967d6;
+	color: #ffffff;
+	border-color: #3967d6
 }
 
 /* custom checkbox */
@@ -547,4 +579,194 @@ button {
 	font-size: 13px;
 	line-height: 20px;
 	padding: 8px 0 0 0;
+}
+
+
+.payment-wrapper {
+    max-width: 496px;
+	margin: 0 auto;
+	padding: 0 0 25px;
+}
+
+.payment-method {
+	display: flex;
+	justify-content:space-between; 
+}
+
+.payment-method-type {
+    padding: 18px 12px 11px 20px;
+    border-radius: 10px;
+	border: solid 1px #dfe1e6;
+	width: 48%;
+	position: relative;
+	cursor: pointer;
+}
+
+.payment-typetext {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+	color: #000;
+	float: left;
+}
+
+i.payment-card-icon,
+i.payment-instant-icon {
+    float: right;
+}
+
+.payment-method-type p{
+	font-size: 12px;
+	line-height: 16px;
+	color: #6c798f;
+	font-style: italic;
+	clear: both;
+	padding: 5px 0;
+}
+
+span.select-check {
+    display: inline-block;
+    background: #fff;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px #dfe1e6;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -10px;
+    bottom: 0;
+}
+
+.payment-method-type.active-payment-mode span.select-check {
+    background: #3967d6;
+    box-shadow: 0 0 0 1px #3967d6, 0 0 0 2px #fff inset;
+}
+#profile-container{
+	display: none;
+}
+
+.profile-wrapper {
+    max-width: 495px;
+    margin: 0 auto;
+}
+
+.profile-form{
+	border: none;
+}
+
+.profile-form .form-row{
+	border: none;
+	padding-bottom: 20px;
+}
+
+.profile-form .form-row input{
+    display: inline-block;
+    width: auto;
+    border-radius: 10px;
+    border: solid 1px #dfe1e6;
+	width: 47.3%;
+	padding: 8px 10px 7px 20px;
+	margin: 0;
+}
+.profile-form .form-row input:last-child{float: right;}
+.edit-icon{
+	background: url('../images/edit.svg') no-repeat 98% center;
+	background-size: 20px;
+}
+.btn-box button, .btn-box button:focus{
+	padding: 15px 0 14px;
+	border-radius: 10px;
+	background-color: #3967d6;
+	color: #ffffff;
+	outline: 0;
+}
+.terms-text {
+	text-align: center;
+	padding: 15px 0;
+}
+.terms-text a{
+    font-weight: 400;
+}
+
+@media(min-width:768px){
+	.plan-column:nth-child(3n) {
+		margin: 0 0 20px 0;
+	}
+}
+
+@media(max-width:767px){
+	.top-heading{
+		font-size: 20px;
+	}
+	.top-heading span{
+		font-size: 14px;
+		padding: 0 0 10px;
+	}
+	.plan-column{
+		width: 100%;
+	}
+
+	.plan-name{
+		float: left;
+		text-align: left;
+	}
+	.plan-cost{
+		float: right;
+		padding: 0;
+	}
+	.feature-toggle{
+		display: block;
+		float: left;
+		padding: 7px 0 0 0;
+		cursor: pointer;
+		position: relative;
+	}
+	.feature-toggle i{
+		display: inline-block;
+	}
+	.feature-toggle i:after {
+		content: "";
+		border-width: 0 0 2px 2px;
+		border-color: #000;
+		border-style: solid;
+		position: absolute;
+		height: 6px;
+		width: 6px;
+		top: 10px;
+		right: -12px;
+		transform: rotate(-45deg);
+	}
+
+	.feature-toggle.active-arrow i:after {
+		transform: rotate(135deg);
+		top: 14px;
+		transform-origin: center;
+	}
+
+	.plan-column button, .plan-column button:focus{
+		float: right;
+		width: auto;
+		margin: 0;
+		width: 105px;
+		padding: 7px 0;
+	}
+	.plan-featurelist{
+		clear: both;
+		display: none;
+		padding: 10px 0 0 0;
+	}
+
+	.form-row.contact-details input{
+		width: 100%;
+		margin: 0 0 20px;
+	}
+	.btn-box button{
+		margin-top: 0;
+	}
+	.payment-method-type p{
+		font-size: 11px;
+	}
 }

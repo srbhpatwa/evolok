@@ -38,3 +38,40 @@
 		});
 	});
 })();
+
+$(document).ready(function () {
+	$('.plan-column button').on('click', function(){
+		let durationContainer = $('#duration-container');
+		$(this).closest('.plan-column').addClass('active-plancard');
+		$(this).closest('.plan-column').find('button').text('Selected');
+		$(this).closest('.plan-column').siblings().removeClass('active-plancard');
+		$(this).closest('.plan-column').siblings().find('button').text('Select');
+		$(durationContainer).slideDown();
+		let durationHeading;
+		if($('.duration-heading').offset().top){
+			durationHeading = $('.duration-heading').offset().top;
+			$('html,body').animate({scrollTop: durationHeading+'px'}, 500)
+		}
+	});
+
+	$('.checkbox_box').on('click', function(){
+		$('#profile-container').slideDown();
+		let profileHeading;
+		if($('.payment-heading').offset().top){
+			profileHeading = $('.payment-heading').offset().top;
+			$('html,body').animate({scrollTop: profileHeading+'px'}, 500)
+		}
+	});
+
+	$('.payment-method-type').on('click', function(){
+		$(this).addClass('active-payment-mode');
+		$(this).siblings().removeClass('active-payment-mode');
+	});
+
+	$('.feature-toggle').on('click', function(){
+		$(this).toggleClass('active-arrow');
+		$(this).parent().find('ul').slideToggle();
+		$(this).closest('.plan-column').siblings().find('.plan-row').find('ul').slideUp();
+		$(this).closest('.plan-column').siblings().find('.plan-row').find('.feature-toggle').removeClass('active-arrow');
+	})
+});
