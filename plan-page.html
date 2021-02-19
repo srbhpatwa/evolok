@@ -28,7 +28,7 @@
 				<div class="plan-section-wrapper">
 					<h3 class="plan-heading">Select a plan to proceed further</h3>
 					<div class="plan-items-wrapper">
-						<div class="plan-column">
+						<div class="plan-column" name="1">
 							<span class="recommended">RECOMMENDED</span>
 							<div class="plan-row">
 								<div class="plan-name">
@@ -48,7 +48,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="plan-column">
+						<div class="plan-column" name="2">
 							<div class="plan-row">
 								<div class="plan-name">
 									Combo Plan <span>Digital + ePaper</span>
@@ -67,7 +67,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="plan-column">
+						<div class="plan-column" name="3">
 							<div class="plan-row">
 								<div class="plan-name">
 									Combo Plan <span>Digital + ePaper</span>
@@ -98,7 +98,7 @@
 						<div class="best-value">BEST VALUE</div>
 						<div class="select-item">
 							<div class="checkbox_box_wrapper">
-								<label class="checkbox_box">Yearly <span class="discount-red">50% Discount</span>
+								<label class="checkbox_box" name="50">Yearly <span class="discount-red">50% Discount</span>
 									<input type="radio" name="radio">
 									<span class="checkmark"></span>
 								</label>
@@ -113,7 +113,7 @@
 						</div>
 						<div class="select-item">
 							<div class="checkbox_box_wrapper">
-								<label class="checkbox_box">Quarterly <span class="discount-red">20% Discount</span>
+								<label class="checkbox_box" name="20">Quarterly <span class="discount-red">20% Discount</span>
 									<input type="radio" name="radio">
 									<span class="checkmark"></span>
 								</label>
@@ -126,7 +126,7 @@
 						</div>
 						<div class="select-item">
 							<div class="checkbox_box_wrapper">
-								<label class="checkbox_box">Monthly <span class="discount-red">50% Discount</span>
+								<label class="checkbox_box" name="50">Monthly <span class="discount-red">50% Discount</span>
 									<input type="radio" name="radio">
 									<span class="checkmark"></span>
 								</label>
@@ -146,7 +146,7 @@
 				<div class="payment-wrapper">
 					<h3 class="common-h3heading payment-heading">Select preffered mode of payment </h3>
 					<div class="payment-method">
-						<div class="payment-method-type">
+						<div class="payment-method-type" name="card">
 							<span class="select-check"></span>
 							<div class="payment-typetext">Pay Using <br>Card*</div>
 							<i class="payment-card-icon"><img src="images/pay.svg" /></i>
@@ -154,7 +154,7 @@
 								Canara and Citibank only)</p>
 							<span class="info-icon">i</span>
 						</div>
-						<div class="payment-method-type">
+						<div class="payment-method-type" name="Instant">
 							<span class="select-check"></span>
 							<div class="payment-typetext">Instant <br>Payments*</div>
 							<i class="payment-instant-icon"><img src="images/wallet.svg" /></i>
@@ -162,19 +162,22 @@
 							<span class="info-icon">i</span>
 						</div>
 					</div>
+					<span class="error-msg">Please recheck input type text</span>
 				</div>
 			</div>
 			<div class="row">
 				<div class="profile-wrapper">
 					<h3 class="common-h3heading profile-heading">Create your profile</h3>
 					<form class="profile-form">
-						<div class="form-row">
-							<input type="text" placeholder="First Name" />
-							<input type="text" placeholder="Last Name" />
+						<div class="form-row top-inputbox">
+							<input type="text" placeholder="First Name" id="firstname"/>
+							<input type="text" placeholder="Last Name" id="lastname"/>
+							<span class="error-msg"></span>
 						</div>
 						<div class="form-row contact-details">
-							<input type="Email" placeholder="Email" class="edit-icon" />
-							<input type="tel" placeholder="Mobile" class="edit-icon" />
+							<input type="Email" placeholder="Email" class="edit-icon" id="emailid"/>
+							<input type="tel" placeholder="Mobile" class="edit-icon" id="mobilenum"/>
+							<span class="error-msg"></span>
 						</div>
 						<div class="btn-box">
 							<button>Pay ₹ 2,999</button>

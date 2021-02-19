@@ -682,19 +682,21 @@ span.select-check {
 	padding-bottom: 20px;
 }
 
+
 .profile-form .form-row input{
     display: inline-block;
     width: auto;
     border-radius: 10px;
     border: solid 1px #dfe1e6;
-	width: 47.3%;
+	width: 48%;
 	padding: 8px 10px 7px 20px;
 	margin: 0;
 }
 .profile-form .form-row input:last-child{float: right;}
-.edit-icon{
-	background: url('../images/edit.svg') no-repeat 98% center;
-	background-size: 20px;
+.profile-form .form-row input.edit-icon{
+	background: url('../images/edit.svg') no-repeat 97.5% center;
+	background-size: 18px;
+	padding-right: 28px;
 }
 .btn-box button, .btn-box button:focus{
 	padding: 15px 0 14px;
@@ -711,9 +713,20 @@ span.select-check {
     font-weight: 400;
 }
 
+.error-msg{
+	color: #ff0000;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 10px 0 0 5px;
+	display: none;
+}
+
 @media(min-width:768px){
 	.plan-column:nth-child(3n) {
 		margin: 0 0 20px 0;
+	}
+	.profile-form .form-row input:nth-child(2) {
+		margin-left: 3%;
 	}
 }
 

@@ -40,6 +40,16 @@
 })();
 
 $(document).ready(function () {
+
+
+	let selectedPlan = '';
+	let planCharges = '';
+	let paymentMode = '';
+	let firstName = '';
+	let lastName = '';
+	let emailId = '';
+	let phone = '';
+
 	$('.plan-column button').on('click', function(){
 		let durationContainer = $('#duration-container');
 		$(this).closest('.plan-column').addClass('active-plancard');
@@ -52,6 +62,7 @@ $(document).ready(function () {
 			durationHeading = $('.duration-heading').offset().top;
 			$('html,body').animate({scrollTop: durationHeading+'px'}, 500)
 		}
+		selectedPlan = $(this).closest('.plan-column').attr('name');
 	});
 
 	$('.checkbox_box').on('click', function(){
@@ -61,11 +72,14 @@ $(document).ready(function () {
 			profileHeading = $('.payment-heading').offset().top;
 			$('html,body').animate({scrollTop: profileHeading+'px'}, 500)
 		}
+		planCharges = $(this).attr('name');
 	});
 
 	$('.payment-method-type').on('click', function(){
 		$(this).addClass('active-payment-mode');
 		$(this).siblings().removeClass('active-payment-mode');
+		paymentMode = $(this).attr('name');
+		$('.payment-wrapper .error-msg').hide();
 	});
 
 	$('.feature-toggle').on('click', function(){
@@ -73,5 +87,56 @@ $(document).ready(function () {
 		$(this).parent().find('ul').slideToggle();
 		$(this).closest('.plan-column').siblings().find('.plan-row').find('ul').slideUp();
 		$(this).closest('.plan-column').siblings().find('.plan-row').find('.feature-toggle').removeClass('active-arrow');
+	});
+
+	$('.top-inputbox input').on('keyup', function(){
+		if($(this).val().length > 1){
+			$('.top-inputbox .error-msg').fadeOut();
+		}
+	});
+
+	$('.contact-details input').on('focukeyups', function(){
+		if($(this).val().length > 1){
+			$('.contact-details .error-msg').fadeOut();
+		}
 	})
+
+	$('.btn-box button').on('click', function(ev){
+
+		firstName = $('#firstname').val();
+		lastName = $('#lastname').val();
+		emailId = $('#emailid').val();
+		phone = $('#mobilenum').val();
+
+		if(selectedPlan == ''){
+			alert("selectedPlan");
+			return false;
+		} 
+		else if(planCharges == ''){
+			alert("planCharges");
+			return false;
+		} 
+		else if(paymentMode == ''){
+			$('.payment-wrapper .error-msg').text('Please Select Payment type.').fadeIn();
+			return false;
+		}
+		else if(firstName == ''){
+			$('.top-inputbox .error-msg').text('Please enter your first name.').fadeIn();
+			return false;
+		}	
+		else if(lastName == ''){
+			$('.top-inputbox .error-msg').text('Please enter your last name.').fadeIn();
+			return false;
+		}
+		else if(emailId == ''){
+			$('.contact-details .error-msg').text('Please enter valid email.').fadeIn();
+			return false;
+		}
+		else if(phone == ''){
+			$('.contact-details .error-msg').text('Please enter your mobile number.').fadeIn();
+			return false;
+		}
+		ev.preventDefault();
+	})
+
 });
