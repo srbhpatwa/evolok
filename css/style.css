@@ -46,7 +46,7 @@ h4 {
 }
 
 .container {
-	max-width: 960px;
+	max-width: 400px;
 	margin: 0 auto;
 	padding: 0 10px
 }
@@ -108,7 +108,7 @@ input[type="number"] {
 	;
 	transition: all .3s ease;
 	outline: 0;
-	margin: 0 0 15px;
+	margin: 0 0 12px;
 }
 
 input[type="text"]:focus,
@@ -312,10 +312,15 @@ button {
 	display: block;
 }
 
+.app-title p {
+    max-width: 280px;
+    margin: 0 auto;
+}
+
 span.edit-email {
-    position: absolute;
-    right: 10px;
-    top: 18px;
+	position: absolute;
+    right: 15px;
+    top: 15px;
     font-weight: 700;
     font-size: 12px;
     cursor: pointer;
