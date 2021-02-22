@@ -850,12 +850,15 @@ span.select-check {
 	}
 
 	.plan-name{
+		font-size: 16px;
+		line-height: 20px;
 		float: left;
 		text-align: left;
 	}
 	.plan-cost{
 		float: right;
 		padding: 0;
+		font-size: 18px;
 	}
 	.feature-toggle{
 		display: block;
@@ -898,10 +901,23 @@ span.select-check {
 		display: none;
 		padding: 10px 0 0 0;
 	}
-
+	.auto-renewtxt{
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.profile-form .form-row input{
+		padding: 9px 10px 9px 20px;
+	}
+	.profile-form .form-row {
+		border: none;
+		padding-bottom: 10px;
+	}
+	.form-row.top-inputbox input:nth-child(2) {
+		float: right;
+	}
 	.form-row.contact-details input{
 		width: 100%;
-		margin: 0 0 20px;
+		margin: 0 0 10px;
 	}
 	.btn-box button{
 		margin-top: 0;
@@ -911,6 +927,8 @@ span.select-check {
 	}
 	.payment-method-type p{
 		font-size: 11px;
+	}
+}
 .sign-options {
     margin-top: 28px;
 }
