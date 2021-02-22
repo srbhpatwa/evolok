@@ -651,6 +651,14 @@ ul#tabs li a.inactive {
 	color: #fe1313;
 	display: block;
 }
+
+.discount-no{
+	font-weight: 400;
+	color: #6c798f;
+	font-style: italic;
+	display: block;
+}
+
 .cost-time {
 	float: right;
 	font-size: 18px;
@@ -773,7 +781,8 @@ span.select-check {
     cursor: pointer;
     position: absolute;
     right: 0;
-    top: 0;
+	top: 0;
+	font-style: italic;
 }
 
 #profile-container{
@@ -795,21 +804,39 @@ span.select-check {
 }
 
 
-.profile-form .form-row input{
+.profile-form .form-row .input{
     display: inline-block;
     width: auto;
     border-radius: 10px;
     border: solid 1px #dfe1e6;
 	width: 48%;
-	padding: 8px 10px 7px 20px;
 	margin: 0;
+	padding: 2px;
+	background: #ffffff;
+	position: relative;
 }
-.profile-form .form-row input:last-child{float: right;}
-.profile-form .form-row input.edit-icon{
-	background: url('../images/edit.svg') no-repeat 97.5% center;
-	background-size: 18px;
-	padding-right: 28px;
+
+.profile-form .form-row .input:last-child{float: right;}
+.profile-form .form-row .input .edit-icon{
+	background: url(../images/edit.svg) no-repeat center top;
+    background-size: 18px;
+    padding-right: 28px;
+    cursor: pointer;
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    right: 0;
+    top: 8px;
 }
+
+.profile-form .form-row input{
+	border: none;
+	margin: 0;
+	padding: 7px 10px 7px 20px;
+	background: transparent;
+}
+
 .btn-box button, .btn-box button:focus{
 	padding: 15px 0 14px;
 	border-radius: 10px;
@@ -820,6 +847,14 @@ span.select-check {
 .terms-text {
 	text-align: center;
 	padding: 15px 0;
+}
+.terms-text p{
+	font-size: 12px;
+	line-height: 18px;
+	color: #6c798f;
+	font-style: italic;
+	max-width: 290px;
+	margin: 0 auto 14px;
 }
 .terms-text a{
     font-weight: 400;
@@ -832,7 +867,7 @@ span.select-check {
 	padding: 10px 0 0 5px;
 	display: none;
 }
-.profile-form .form-row input.error-highlightinput{
+.profile-form .form-row .input.error-highlightinput{
 	border-color: #ff0000;
 }
 
@@ -840,7 +875,7 @@ span.select-check {
 	.plan-column:nth-child(3n) {
 		margin: 0 0 20px 0;
 	}
-	.profile-form .form-row input:nth-child(2) {
+	.profile-form .form-row .input:nth-child(2) {
 		margin-left: 3%;
 	}
 }
@@ -856,15 +891,23 @@ span.select-check {
 	.plan-column{
 		width: 100%;
 	}
-
+	.plan-row{
+		padding-bottom: 5px;
+	}
 	.plan-name{
 		font-size: 16px;
 		line-height: 20px;
 		float: left;
 		text-align: left;
 	}
+	.plan-name span,
+	.plan-cost span{
+		font-size: 12px;
+		padding: 0;
+	}
 	.plan-cost{
 		float: right;
+		text-align: right;
 		padding: 0;
 		font-size: 18px;
 	}
@@ -913,17 +956,18 @@ span.select-check {
 		font-size: 12px;
 		line-height: 16px;
 	}
-	.profile-form .form-row input{
+	.profile-form .form-row .input{
 		padding: 9px 10px 9px 20px;
 	}
+	.profile-form .form-row input{padding: 0;}
 	.profile-form .form-row {
 		border: none;
 		padding-bottom: 10px;
 	}
-	.form-row.top-inputbox input:nth-child(2) {
+	.form-row.top-inputbox .input:nth-child(2) {
 		float: right;
 	}
-	.form-row.contact-details input{
+	.form-row.contact-details .input{
 		width: 100%;
 		margin: 0 0 10px;
 	}
@@ -935,6 +979,7 @@ span.select-check {
 	}
 	.payment-method-type p{
 		font-size: 11px;
+		line-height: 14px;
 	}
 }
 .sign-options {
