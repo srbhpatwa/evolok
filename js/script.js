@@ -149,52 +149,56 @@ $(document).ready(function () {
 
 	$('.top-inputbox input').on('keyup', function(){
 		if($(this).val().length > 1){
+			$(this).removeClass('error-highlightinput');
 			$('.top-inputbox .error-msg').fadeOut();
 		}
 	});
 
 	$('.contact-details input').on('keyup', function(){
 		if($(this).val().length > 1){
+			$(this).removeClass('error-highlightinput');
 			$('.contact-details .error-msg').fadeOut();
 		}
 	})
 
 	$('.btn-box button').on('click', function(ev){
 
-		firstName = $('#firstname').val();
-		lastName = $('#lastname').val();
-		emailId = $('#emailid').val();
-		phone = $('#mobilenum').val();
+		firstName = $('#firstname');
+		lastName = $('#lastname');
+		emailId = $('#emailid');
+		phone = $('#mobilenum');
 
 		var regEx = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-		var validEmail = regEx.test(emailId);
+		var validEmail = regEx.test(emailId.val());
 
 		if(selectedPlan == ''){
-			alert("selectedPlan");
 			return false;
 		} 
 		else if(planCharges == ''){
-			alert("planCharges");
 			return false;
 		} 
 		else if(paymentMode == ''){
 			$('.payment-wrapper .error-msg').text('Please Select Payment type.').fadeIn();
 			return false;
 		}
-		else if(firstName == ''){
+		else if(firstName.val() == ''){
 			$('.top-inputbox .error-msg').text('Please enter your first name.').fadeIn();
+			firstName.addClass('error-highlightinput');
 			return false;
 		}	
-		else if(lastName == ''){
+		else if(lastName.val() == ''){
 			$('.top-inputbox .error-msg').text('Please enter your last name.').fadeIn();
+			lastName.addClass('error-highlightinput');
 			return false;
 		}
-		else if(emailId == '' || !validEmail){
+		else if(emailId.val() == '' || !validEmail){
 			$('.contact-details .error-msg').text('Please enter valid email.').fadeIn();
+			emailId.addClass('error-highlightinput');
 			return false;
 		}
-		else if(phone == ''){
+		else if(phone.val() == '' || phone.val().length < 10 || phone.val().length > 10 ){
 			$('.contact-details .error-msg').text('Please enter your mobile number.').fadeIn();
+			phone.addClass('error-highlightinput');
 			return false;
 		}
 		ev.preventDefault();
