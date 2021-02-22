@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Evolok Reset Password</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+	<div class="app-container">
+		<div class="container">
+
+			<div class="row">
+				<div class="app-content">
+					<div class="app-title">
+						<img src="images/ie-icon.svg" alt="indian express">
+						<h1>SignIn</h1>
+						<p>SignIn to read exclusive and premium 
+							stories from The Indian Express.</p>
+					</div>
+					<div class="signin-method-options">
+						<ul id="tabs">
+
+							<li><a id="tab1">Use Password</a></li>
+							<li><a id="tab2">Use OTP</a></li>
+
+						</ul>
+					</div>
+					<div class="tab-content" id="tab1C">
+						<form class="ie-form" action="#" method="post">
+							<div class="row">
+								<div class="form-field ie-sm-12">
+									<input type="text" placeholder="Email / Mobile" name="uname" value="pranjal.anand@indianexpress.com" required>
+									<span class="edit-email"><img src="images/edit.svg"></span>
+								</div>
+								<div class="form-field ie-sm-12">
+									<input type="password" placeholder="Password" name="psw" required>
+									<span class="resend-otp">Forgot?</span>
+								</div>
+								<div class="form-field ie-sm-12">
+									<label><input type="checkbox" id="remember" name="remember" value="remember"> Keep
+										me logged in</label>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="container">
+									<button type="submit" class="btn filled">SignIn</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="tab-content" id="tab2C">
+						<form class="ie-form" action="#" method="post">
+							<div class="row">
+								<div class="form-field ie-sm-12">
+									<input type="text" placeholder="Email / Mobile" name="uname" value="pranjal.anand@indianexpress.com" required>
+									<span class="edit-email"><img src="images/edit.svg"></span>
+								</div>
+								<div class="form-field ie-sm-12">
+									<input type="number" placeholder="OTP" name="otp" required>
+									<span class="resend-otp">Resend?</span>
+								</div>
+								<div class="form-field ie-sm-12">
+									<label><input type="checkbox" id="remember" name="remember" value="remember"> Keep
+										me logged in</label>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="container">
+									<button type="submit" class="btn filled">SignIn</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="app-content-bottom">
+						<p>Don't have an account?
+							<a href="#">Create One Now</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
