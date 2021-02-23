@@ -144,12 +144,14 @@ input.valid {
 input[name="uname"],
 input[name="fname"],
 input[name="psw"],
-input[name="otp"] {
+input[name="otp"],
+input[name="mobile"],
+input[name="email"] {
 	padding-left: 33px;
 }
 
 input[name="uname"] {
-	background: url(../images/email.svg) left center /17px 21px no-repeat;
+	background: url(../images/email-mobile.svg) left center /17px 21px no-repeat;
 }
 
 input[name="fname"] {
@@ -162,6 +164,14 @@ input[name="psw"] {
 
 input[name="otp"] {
 	background: url(../images/OTP.svg) left center /24px 22px no-repeat;
+}
+
+input[name="mobile"] {
+	background: url(../images/mobile.svg) left center /24px 22px no-repeat;
+}
+
+input[name="email"] {
+	background: url(../images/email.svg) left center /24px 22px no-repeat;
 }
 
 input[type=checkbox] {
@@ -476,10 +486,19 @@ ul#tabs li a.inactive {
     margin-bottom: 20px;
 }
 
-.thankyou-benefits ul li img {
-    max-width: 50px;
-    margin: 0 auto 9px;
+.thankyou-benefits .thank-img {
+    width: 50px;
+    height: 50px;
+    background: #f3f7fa;
     display: block;
+    margin: 0 auto 9px;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.thankyou-benefits ul li img {
+    width: 100%;
+	height: 100%;
 }
 
 @media(max-width: 360px) {
