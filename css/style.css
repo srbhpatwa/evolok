@@ -105,10 +105,9 @@ input[type="number"] {
 	font-weight: normal;
 	line-height: normal;
 	color: #7a869a;
-	;
 	transition: all .3s ease;
 	outline: 0;
-	margin: 0 0 12px;
+	margin: 0 0 8px;
 }
 
 input[type="text"]:focus,
@@ -357,6 +356,7 @@ ul#tabs li a {
     padding: 11px 18px 9px;
     display: inline-block;
     border-radius: 8px;
+	cursor: pointer;
     background-color: #3967d6;
 }
 
@@ -445,7 +445,7 @@ ul#tabs li a.inactive {
 }
 
 .sign-options ul li a img {
-    max-width: 22px;
+    max-width: 20px;
     width: 100%;
     position: absolute;
     left: 16px;

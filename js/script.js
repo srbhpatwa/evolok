@@ -1,6 +1,10 @@
 (function () {
 	$(document).ready(function () {
 
+		$( ".edit-email" ).click(function() {
+			$(this).prev('input').removeAttr('disabled').focus();
+		});
+
 		function nameValidation() {
 			var first_name = $('input[name="fname"]').val();
 			$('input[name="fname"]').next(".errormsg").remove();
