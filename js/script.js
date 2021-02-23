@@ -216,7 +216,8 @@ $(document).ready(function () {
 	});
 
 	$('.edit-icon').on('click', function(){
-		$(this).siblings('input').attr('disabled', false).focus();
+		$(this).parent().removeClass('disabled-input').focus();
+		$(this).siblings('input').focus();
 	});
 
 });

@@ -822,9 +822,13 @@ span.select-check {
 	position: relative;
 }
 
+.profile-form .form-row .input.disabled-input{
+	background: rgba(0,0,0,0.025);
+}
+
 .profile-form .form-row .input:last-child{float: right;}
 .profile-form .form-row .input .edit-icon{
-	background: url(../images/edit.svg) no-repeat center top;
+	background: url(../images/edit.svg) no-repeat center 8px;
     background-size: 18px;
     padding-right: 28px;
     cursor: pointer;
@@ -833,7 +837,7 @@ span.select-check {
     width: 36px;
     position: absolute;
     right: 0;
-    top: 8px;
+    top: 0;
 }
 
 .profile-form .form-row input{
