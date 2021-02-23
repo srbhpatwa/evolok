@@ -202,6 +202,21 @@ $(document).ready(function () {
 			return false;
 		}
 		ev.preventDefault();
-	})
+	});
+
+	$('.payment-method-type .info-icon').on('click',function(event){
+		$(this).addClass('active-info-icon');
+		$('.additional-info').addClass('active-popup');
+		event.stopPropagation();
+	});
+
+	$('.close-btn').on('click', function(){
+		$('.additional-info').removeClass('active-popup');
+		$('.payment-method-type .info-icon').removeClass('active-info-icon');
+	});
+
+	$('.edit-icon').on('click', function(){
+		$(this).siblings('input').attr('disabled', false).focus();
+	});
 
 });
