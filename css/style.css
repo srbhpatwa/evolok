@@ -885,8 +885,8 @@ span.select-check {
     padding: 25px 20px 10px 20px;
     border-radius: 10px;
     box-shadow: 0 0 24px 0 rgba(139, 137, 137, 0.5);
-    position: absolute;
-    top: 0;
+	position: fixed;
+	top: 0;
     right: 0;
     left: 0;
     bottom: 0;
@@ -897,6 +897,7 @@ span.select-check {
 	overflow: auto;
 	box-sizing: content-box;
 	display: none;
+	z-index: 99;
 }
 
 .additional-infoh3 {
@@ -959,6 +960,16 @@ span.close-btn::after {
 
 .additional-info.active-popup {
     display: block;
+}
+
+
+.additional-info ul li.click-here{
+	font-style: italic;
+	font-weight: 700;
+}
+
+.hide-scroll {
+    overflow: hidden;
 }
 
 @media(min-width:768px){
@@ -1073,6 +1084,7 @@ span.close-btn::after {
 	}
 	.additional-info{
 		height: 260px;
+		width: 282px;
 	}
 }
 .sign-options {

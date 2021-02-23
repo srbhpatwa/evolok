@@ -207,12 +207,14 @@ $(document).ready(function () {
 	$('.payment-method-type .info-icon').on('click',function(event){
 		$(this).addClass('active-info-icon');
 		$('.additional-info').addClass('active-popup');
+		$('body').addClass('hide-scroll');
 		event.stopPropagation();
 	});
 
 	$('.close-btn').on('click', function(){
 		$('.additional-info').removeClass('active-popup');
 		$('.payment-method-type .info-icon').removeClass('active-info-icon');
+		$('body').removeClass('hide-scroll');
 	});
 
 	$('.edit-icon').on('click', function(){
