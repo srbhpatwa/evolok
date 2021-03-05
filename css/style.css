@@ -147,11 +147,11 @@ input[name="psw"],
 input[name="otp"],
 input[name="mobile"],
 input[name="email"] {
-	padding-left: 33px;
+	padding-left: 27px;
 }
 
 input[name="uname"] {
-	background: url(../images/email-mobile.svg) left center /17px 21px no-repeat;
+	background: url(../images/email-mobile.svg) left center /21px 25px no-repeat;
 }
 
 input[name="fname"] {
@@ -329,14 +329,14 @@ button {
 span.edit-email {
 	position: absolute;
     right: 15px;
-    top: 15px;
+    top: 20px;
     font-weight: 700;
     font-size: 12px;
     cursor: pointer;
 }
 
 span.edit-email img {
-    width: 20px;
+    width: 16px;
 }
 
 .signin-method-options {

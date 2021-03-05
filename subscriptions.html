@@ -1,0 +1,887 @@
+<style>
+    .ie-widget-wrapper,
+.ie-widget-wrapper * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+.ie-widget-wrapper {
+	padding: 20px 20px 12px;
+	border-radius: 20px;
+	border: solid 3px #dfe1e6;
+	margin-top: 30px;
+	position: relative;
+	max-width: 400px;
+	margin: 44px auto 30px;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1.47;
+	color: #6c798f;
+	min-height: calc(100vh - 74px);
+}
+
+.ev .h1,
+.ev .h2,
+.ev .h3,
+.ev h1,
+.ev h2,
+.ev h3 {
+	font-weight: 700;
+	color: #000;
+}
+
+.ev a:focus,
+.ev a:hover {
+	text-decoration: none;
+}
+
+.ie-widget-wrapper .ie-app-title {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.ie-widget-wrapper .ie-app-title>img {
+	max-width: 60px;
+	margin: -50px auto 5px;
+	display: block;
+}
+
+.ie-widget-wrapper .ie-app-title h2 {
+	font-size: 24px;
+	margin: 0 0 5px;
+	line-height: normal;
+}
+
+.ie-widget-wrapper .ie-app-title p {
+	max-width: 280px;
+	margin: 0 auto;
+}
+
+#widget-body {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	width: 100%;
+	padding: 0;
+	margin-bottom: 30px;
+}
+
+#widget-body>* {
+	width: 100%;
+}
+
+.ie-widget-wrapper #widget-body .ev .col-sm-10 {
+	margin-left: 0;
+	width: 100%;
+}
+
+.ie-widget-wrapper .ev .purchases-list-container .table-responsive {
+	overflow-y: auto;
+}
+
+.ie-widget-wrapper .widget-body {
+	padding: 30px 0;
+}
+
+ev-profile .widget-header {
+	background: transparent;
+	font-weight: 700;
+	font-size: 24px;
+	color: #000;
+	text-align: center;
+	text-transform: none;
+	line-height: normal;
+	padding: 0;
+}
+
+#widget-body .widget-form {
+	width: 100%;
+	-webkit-box-ordinal-group: 2;
+	-ms-flex-order: 1;
+	order: 1;
+}
+
+div#social_box {
+	-webkit-box-ordinal-group: 4;
+	-ms-flex-order: 3;
+	order: 3;
+}
+
+div#login-divider {
+	-webkit-box-ordinal-group: 3;
+	-ms-flex-order: 2;
+	order: 2;
+}
+
+#widget-body #registrationCaptureAttrs {
+	width: 100%;
+}
+
+#widget-body .widget-label {
+	display: none;
+}
+
+#widget-body .widget-label+.ev.col-sm-11,
+#widget-body .widget-label+.ev.col-sm-10,
+#widget-body .widget-label+.ev.col-sm-9,
+#widget-body .widget-label+.ev.col-sm-8,
+#widget-body .widget-label+.ev.col-sm-7,
+#widget-body .widget-label+.ev.col-sm-6 {
+	width: 100%;
+}
+
+.ev .form-horizontal .form-group {
+	margin-bottom: 0;
+}
+
+#widget-body .widget-input {
+	width: 100%;
+	display: block;
+	border: 0;
+	border-bottom: solid 1px #e1e2e7;
+	padding: 15px;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: normal;
+	color: #7a869a;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline: 0;
+	margin: 0 0 8px;
+	border-radius: 0;
+	padding-left: 27px;
+	height: auto;
+}
+
+#widget-body .widget-input[name="first_name"] {
+	background: url(https://vipgo.indianexpress.com/wp-content/themes/indianexpress/images/evolok/name.svg) left center /23px 25px no-repeat;
+}
+
+#widget-body .widget-input[name="last_name"] {
+	background: url(https://vipgo.indianexpress.com/wp-content/themes/indianexpress/images/evolok/name.svg) left center /23px 25px no-repeat;
+}
+
+#widget-body .widget-input[type="email"] {
+	background: url(https://vipgo.indianexpress.com/wp-content/themes/indianexpress/images/evolok/email.svg) left center /21px 25px no-repeat;
+}
+
+#widget-body .widget-input[type="password"] {
+	background: url(https://vipgo.indianexpress.com/wp-content/themes/indianexpress/images/evolok/locked.svg) left center /17px 25px no-repeat;
+}
+
+#widget-body .widget-input:focus {
+	border-color: #3967d6;
+	outline: 0;
+}
+
+#widget-body .widget-input::-webkit-input-placeholder {
+	color: #7a869a;
+}
+
+#widget-body .widget-input:-ms-input-placeholder {
+	color: #7a869a;
+}
+
+#widget-body .widget-input::-moz-placeholder {
+	color: #7a869a;
+}
+
+#widget-body .widget-input::-ms-input-placeholder {
+	color: #7a869a;
+}
+
+#widget-body .widget-input::placeholder {
+	color: #7a869a;
+}
+
+#widget-body .widget-input.ng-invalid.ng-dirty {
+	background-color: transparent !important;
+	-webkit-box-shadow: 0 2px 4px -3px #ff1313;
+	box-shadow: 0 2px 4px -3px #ff1313;
+	border-color: #ff1313;
+}
+
+#widget-body .widget-input.ng-valid {
+	-webkit-box-shadow: 0 2px 4px -3px #1bc23d;
+	box-shadow: 0 2px 4px -3px #1bc23d;
+	border-color: #1bc23d;
+}
+
+.ie-widget-wrapper #widget-body .ev-error-field {
+	font-size: 12px;
+	line-height: normal;
+	color: #ff1212;
+}
+
+#widget-body .txt_divider {
+	padding: 0;
+	margin: 20px 0 0;
+}
+
+#widget-body .txt_divider span.spacer:before,
+#widget-body .txt_divider span.spacer:after {
+	background: #e1e2e7;
+}
+
+#widget-body .txt_divider p {
+	padding: 10px !important;
+	text-transform: lowercase;
+	line-height: 22px;
+}
+
+#widget-body .forgot-password,
+#widget-body .social-link {
+	font-weight: 700;
+	color: #3967d6;
+	text-decoration: none !important;
+}
+
+
+#widget-body button {
+	padding: 16px 15px 15px;
+	border-radius: 10px;
+	border: solid 1px #3967d6;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: normal;
+	text-align: center;
+	color: #3967d6;
+	display: inline-block;
+	background: transparent;
+	width: 100%;
+	cursor: pointer;
+	margin-top: 30px;
+	outline: 0;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#widget-body button:hover {
+	color: #fff;
+	background-color: #3967d6;
+}
+
+.ie-widget-wrapper ev-login #widget-body button#resetButton,
+.ie-widget-wrapper ev-forgot-password #widget-body button[type="reset"] {
+	display: none;
+}
+
+.ev .checkbox label,
+.ev .radio label {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: normal;
+	color: #7a869a;
+	vertical-align: middle;
+}
+
+.ev .checkbox input[type=checkbox] {
+	margin-top: 0;
+}
+
+.ie-widget-wrapper .ev-social-btns-group {
+	margin: 0 -3px;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+#widget_social_icon_btns .ev-social-btns-group>.btn-group {
+	margin-top: 20px;
+	width: calc(50% - 11px);
+	-ms-flex: 0 0 calc(50% - 11px);
+	-webkit-box-flex: 0;
+	flex: 0 0 calc(50% - 11px);
+}
+
+#widget-body .ev-social-btn-wrapper {
+	border-radius: 10px;
+	border: solid 1px #dfe1e6;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: relative;
+	height: 100%;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: normal;
+	color: #7a869a;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#widget-body .ev-social-btn-wrapper>.ev,
+#widget-body .ev-social-btn-wrapper>.ev:hover {
+	background: transparent;
+	color: #7a869a;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+
+#widget-body .ev-social-btn-wrapper:hover {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#widget-body .ev-social-btn-text {
+	font-size: 12px;
+}
+
+#widget-body button#registerRecaptcha+button#resetButton {
+	display: none;
+}
+
+.ie-widget-bottom {
+	font-size: 14px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.ie-widget-bottom>a {
+	font-weight: bold !important;
+	color: #3967d6 !important;
+	display: block;
+	text-align: center;
+}
+
+#login-flip-back {
+	max-width: 503px;
+	width: 100%;
+}
+
+.ev .alert-info,
+.ev .alert-danger {
+	margin-left: 0;
+}
+
+ev-login .flip-back,
+ev-login .flip-front {
+	position: static;
+	width: 100%;
+}
+
+ev-forgot-password .ev .col-sm-10.col-sm-offset-2 {
+	width: 100%;
+	margin-left: 0;
+}
+
+ev-registration #widget-body .ev-social-btn-text,
+ev-login #widget-body .ev-social-btn-text {
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+	text-align: left;
+	padding: 11px 0;
+	margin: 0;
+	font-weight: 700 !important;
+}
+
+ev-login #widget-body .ev-social-btn-text:before {
+	content: "SignIn with ";
+	display: block;
+	line-height: normal;
+	font-weight: 400;
+}
+
+ev-registration #widget-body .ev-social-btn-text:before {
+	content: "SignUp with ";
+	display: block;
+	line-height: normal;
+	font-weight: 400;
+}
+
+
+#widget-body .ev-social-btn-wrapper {
+	text-align: left;
+	padding: 0px 15px 0px 45px;
+	height: 54px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.ev-social-btn-wrapper .ev-social-btn-icon {
+	position: absolute;
+	left: 16px;
+	padding: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.ev-social-btn-wrapper .ev-social-btn-icon .ev.fa {
+	color: transparent;
+}
+
+.ev.fa.fa-facebook {
+	background: url(/wp-content/themes/indianexpress/images/evolok/facebook.svg) center /cover no-repeat;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+}
+
+.ev.fa.fa-google {
+	background: url(/wp-content/themes/indianexpress/images/evolok/gmail.svg) center /cover no-repeat;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+}
+
+.ev.fa.fa-apple {
+	background: url(/wp-content/themes/indianexpress/images/evolok/apple.svg) center /cover no-repeat;
+	width: 20px;
+	height: 22px;
+	margin: 0;
+}
+
+.ev.fa.fa-linkedin {
+	background: url(/wp-content/themes/indianexpress/images/evolok/linkedin.svg) center /cover no-repeat;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+}
+
+
+.thankyou-benefits {
+	margin-top: 30px;
+}
+
+.ie-widget-wrapper .thankyou-benefits ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ie-widget-wrapper .thankyou-benefits ul li {
+	width: 50%;
+	text-align: center;
+	padding: 0 10px;
+	margin-bottom: 20px;
+}
+
+.ie-widget-wrapper .thankyou-benefits .thank-img {
+	width: 50px;
+	height: 50px;
+	background: #f3f7fa;
+	display: block;
+	margin: 0 auto 9px;
+	padding: 12px;
+	border-radius: 50%;
+}
+
+.ie-widget-wrapper .thankyou-benefits ul li img {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.ev a.btn {
+	padding: 16px 15px 15px;
+	border-radius: 10px;
+	border: solid 1px #3967d6;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: normal;
+	text-align: center;
+	color: #3967d6;
+	background: transparent;
+	width: 100%;
+	cursor: pointer;
+	margin-top: 30px;
+	outline: 0;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	display: block;
+}
+
+.ev a.btn:hover {
+	color: #fff;
+	background-color: #3967d6;
+	text-decoration: none;
+}
+
+
+.ie-widget-wrapper #loader-1:after,
+.ie-widget-wrapper #loader-1:before {
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+header.g-header nav.g-header__global-bar {
+	background: #003f74;
+	color: #fff;
+	padding: 0px 20px;
+	text-align: center;
+}
+
+.g-header img {
+	max-width: 60px;
+}
+
+.ie-account-page .ie-widget-wrapper:not(.no-logged-in) {
+	max-width: 100%;
+	border: 0;
+	padding: 20px 0;
+	margin: 0;
+}
+
+.ie-account-page .ie-widget-wrapper:not(.no-logged-in).ie-app-title {
+	text-align: left;
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.ie-account-page .sidebar-ctr ul {
+	margin-bottom: 0;
+	list-style: none;
+}
+
+.ie-account-page .sidenav-ctr .list-group-li {
+	text-decoration: none;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.ie-account-page .sidenav-ctr .list-group-li:last-child {
+	border-bottom: none;
+}
+
+.ie-account-page .sidenav-ctr .list-group-li span {
+	margin-right: 1rem;
+	font-size: 1rem;
+	vertical-align: middle;
+	color: #747474;
+}
+
+.ie-account-page .sidenav-ctr .list-group-li span.menu-collapsed {
+	display: inline-block;
+}
+
+.ie-account-page .ev .container {
+	max-width: 940px;
+	width: 100%;
+}
+
+.ie-account-page .sidenav-ctr .list-group a {
+	color: #000000;
+	display: block;
+	padding: 20px 20px 20px 0;
+	position: relative;
+	border: none;
+	background: no-repeat;
+	text-shadow: none;
+}
+
+.ie-account-page .sidenav-ctr .list-group a.active {
+	font-weight: 600;
+}
+
+.ie-account-page .sidenav-ctr .list-group a.active:hover {
+	background: none;
+	text-shadow: none;
+}
+
+.ie-account-page .sidenav-ctr .list-group-li span.sidebar_icon {
+	display: none;
+}
+
+.ie-account-page .sidenav-ctr .list-group a:hover span {
+	color: #000;
+	font-weight: 600;
+}
+
+.ie-account-page ev-profile .widget-header {
+	text-align: left;
+	margin-bottom: 15px;
+}
+
+.ie-widget-wrapper .container .ie-app-title p {
+	max-width: none;
+}
+
+.mainbar-ctr .sidenav-ctr {
+	display: none;
+}
+
+.ev .list-group-item.active,
+.ev .list-group-item.active:focus,
+.ev .list-group-item.active:hover {
+	box-shadow: none;
+	background: transparent;
+}
+
+@media (min-width: 768px) {
+	.mainbar-ctr:before {
+		content: '';
+		position: absolute;
+		pointer-events: none;
+		top: -20px;
+		bottom: -20px;
+		border-left: 1px solid #e5e5e5;
+		left: 0px;
+	}
+
+	.ie-account-page .ie-widget-wrapper:not(.logged-in) #widget-body button {
+		width: auto;
+		padding: 15px 25px;
+	}
+}
+
+@media (max-width: 767px) {
+	.ie-account-page .ie-widget-wrapper:not(.no-logged-in) {
+		background-color: #f8f8f8;
+		border-radius: 0;
+	}
+
+	.sidebar-ctr {
+		display: none;
+	}
+
+	.mainbar-ctr .sidenav-ctr {
+		display: block;
+		background: #fff;
+	}
+
+	#tgl-page-body {
+		padding: 15px;
+		background: #fff;
+	}
+
+	.ie-account-page .ie-widget-wrapper:not(.no-logged-in) .ie-app-title {
+		margin-bottom: 0;
+		border-bottom: 0;
+	}
+
+	.ie-account-page .sidenav-ctr .list-group a {
+		padding: 20px;
+	}
+
+	.ie-account-page .sidenav-ctr .list-group-li:last-child {
+		border-bottom: 1px solid #e8e8e8;
+		box-shadow: none;
+	}	
+
+	.ie-account-page .sidenav-ctr .list-group-li .active span {
+		color: #000000;
+	}
+
+	.ie-account-page .sidenav-ctr .list-group-li {
+		margin-bottom: 0;
+	}
+
+	.ie-account-page .sidenav-ctr .list-group a.active:hover {
+		background: #fff;
+		text-shadow: none;
+	}
+
+	.ie-account-page .sidenav-ctr .list-group a.active span {
+		color: #000;
+		font-weight: 600;
+	}
+
+	.ie-account-page ev-profile .widget-header {
+		display: none;
+	}
+
+	ev-profile .widget-header {
+		font-size: 20px;
+	}
+
+	.ie-account-page #widget-body {
+		margin-bottom: 0;
+	}
+}
+</style>
+<div class="ie-account-page">
+	<header class="g-header">
+		<nav class="g-header__global-bar">
+			<a href="javascript:void(0)" title="Express Login">
+				<img src="/wp-content/themes/indianexpress/images/evolok/ie-icon.svg">
+			</a>
+		</nav>
+	</header>
+
+	<ev-profile profile="userProfile">
+		<ev-profile-when state="not-loggedIn">
+			<div class="ie-widget-wrapper no-logged-in">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<div class="ie-app-title">
+								<h2>My Account</h2>
+								<p style="color: #f00; font-weight: bold;">Looks like you aren't logged in. Please login
+									first.</p>
+								<a class="btn" href="/login">Login</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</ev-profile-when>
+	</ev-profile>
+
+	<ev-profile profile="userProfile">
+		<ev-profile-when state="available">
+			<div class="ie-widget-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<div class="ie-app-title wide-page">
+								<h2>My Account</h2>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 col-sm-12 sidebar-ctr">
+							<div class="rel-pos">
+								<div class="sidenav-ctr outer_shadow">
+									<ul class="list-group sticky-top sticky-offset">
+										<li class="list-group-li">
+											<a href="/my-account"
+												class="prof list-group-item proflist-group-item-action">
+												<div>
+													<span class="sidebar_icon mr-3">
+														<img src="/wp-content/themes/indianexpress/images/evolok/ie-icon.svg"
+															alt="Personal info">
+													</span>
+													<span class="menu-collapsed">Personal info</span>
+												</div>
+											</a>
+										</li>
+										<li class="list-group-li">
+											<a href="/subscription" class="pay list-group-item list-group-item-action active">
+												<div>
+													<span class="sidebar_icon mr-3">
+														<img src="/wp-content/themes/indianexpress/images/evolok/ie-icon.svg"
+															alt="Subscriptions">
+													</span>
+													<span class="menu-collapsed">Subscriptions</span>
+												</div>
+											</a>
+										</li>
+										<li class="list-group-li">
+											<a href="/change-password"
+												class="secu list-group-item list-group-item-action">
+												<div>
+													<span class="sidebar_icon mr-3">
+														<img src="/wp-content/themes/indianexpress/images/evolok/ie-icon.svg"
+															alt="Change Password">
+													</span>
+													<span class="menu-collapsed">Change Password</span>
+												</div>
+											</a>
+										</li>
+										<li class="list-group-li">
+											<a href="#" onclick="javascript:EV.Core.UI.logout();"
+												class="logout list-group-item list-group-item-action">
+												<div>
+													<span class="sidebar_icon mr-3">
+														<img src="/wp-content/themes/indianexpress/images/evolok/ie-icon.svg"
+															alt="Logout">
+													</span>
+													<span class="menu-collapsed">Logout</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-9 col-sm-12 mainbar-ctr">
+							<div class="sidenav-ctr">
+								<div class="list-group list-group-li">
+									<a href="/my-account" class="prof list-group-item list-group-item-action">
+										<div>
+											<span class="sidebar_icon mr-3">
+												<img src="/wp-content/themes/indianexpress/images/evolok/ie-icon.svg"
+													alt="Personal info">
+											</span>
+											<span class="menu-collapsed">Personal info</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="sidenav-ctr">
+								<div class="list-group list-group-li">
+									<a href="/subscription" class="pay list-group-item list-group-item-action active"
+									onclick="innerMenuToggle()" id="innerMenuSel">
+										<div>
+											<span class="sidebar_icon mr-3">
+												<img src="/wp-content/themes/indianexpress/images/evolok/ie-icon.svg"
+													alt="Subscriptions">
+											</span>
+											<span class="menu-collapsed">Subscriptions</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div id="tgl-page-body">
+								<ev-purchases-list
+								service-name="mysubscriptions" title="Subscriptions" show-header="true"></ev-purchases-list>
+							</div>
+							<div class="sidenav-ctr">
+								<div class="list-group list-group-li">
+									<a href="#" class="secu list-group-item list-group-item-action">
+										<div>
+											<span class="sidebar_icon mr-3">
+												<img src="/wp-content/themes/indianexpress/images/evolok/ie-icon.svg"
+													alt="Change Password">
+											</span>
+											<span class="menu-collapsed">Change Password</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="sidenav-ctr">
+								<div class="list-group list-group-li">
+									<a href="#"
+										onclick="javascript:EV.Core.UI.logout();javascript:window.location ='login.html';"
+										class="logout list-group-item list-group-item-action">
+										<div>
+											<span class="sidebar_icon mr-3">
+												<img src="/wp-content/themes/indianexpress/images/evolok/ie-icon.svg"
+													alt="Logout">
+											</span>
+											<span class="menu-collapsed">Logout</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</ev-profile-when>
+	</ev-profile>
+</div>

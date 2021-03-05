@@ -2,7 +2,13 @@
 	$(document).ready(function () {
 
 		$( ".edit-email" ).click(function() {
-			$(this).prev('input').removeAttr('disabled').focus();
+			if ($(this).children('img').attr('src') === 'images/edit.svg') {
+				$(this).children('img').attr('src', 'images/edit-lite.svg');
+				$(this).prev('input').attr('disabled').blur();
+			} else {
+				$(this).children('img').attr('src', 'images/edit.svg');
+				$(this).prev('input').removeAttr('disabled').focus();
+			}
 		});
 
 		function nameValidation() {
